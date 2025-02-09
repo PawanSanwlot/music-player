@@ -18,4 +18,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle, rgba(225,238,195,1) 0%, rgba(240,80,83,1) 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: #0a0a0a;
+
 }
+
