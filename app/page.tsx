@@ -89,7 +89,9 @@ export default function Home() {
 
         <div className="flex justify-between mt-3 ">
           <div >
-            <h3 className="font-extrabold text-xl text-white">Abyss</h3>
+            <h3 style={{
+              textShadow: "1px 1px 2px black"
+            }} className="font-extrabold text-xl text-white">Abyss</h3>
             <p className="text-slate-900 font-medium">Youngblud</p>
           </div>
           <div className="cursor-pointer text-xl "  onClick={handleFavClick}>{favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like"  />}</div>
