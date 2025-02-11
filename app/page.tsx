@@ -1,21 +1,26 @@
-'use client'
-import { IoChevronBackOutline } from "react-icons/io5";
-import { LuListMusic } from "react-icons/lu";
-import { FaRegHeart, FaHeart } from "react-icons/fa";
-import { PiShuffleSimpleLight, PiShuffleSimpleBold } from "react-icons/pi";
-import { RiRepeat2Fill, RiRepeatOneFill } from "react-icons/ri";
-import { TbPlaylist, TbTrashX, TbPlayerSkipForwardFilled, TbPlayerPause, TbPlayerSkipBackFilled, TbPlayerPlay } from "react-icons/tb";
-import { useState, useRef } from "react";
-// pages/index.js or any component file
-import { Poppins } from 'next/font/google';
+"use client"
+
+import { LuListMusic } from "react-icons/lu"
+import { FaRegHeart, FaHeart } from "react-icons/fa"
+import { PiShuffleSimpleLight, PiShuffleSimpleBold } from "react-icons/pi"
+import { RiRepeat2Fill, RiRepeatOneFill } from "react-icons/ri"
+import {
+  TbPlaylist,
+  TbTrashX,
+  TbPlayerSkipForwardFilled,
+  TbPlayerPause,
+  TbPlayerSkipBackFilled,
+  TbPlayerPlay,
+} from "react-icons/tb"
+import { useState, useRef } from "react"
+import { Poppins } from "next/font/google"
 
 const poppins = Poppins({
-  weight: '400',      // You can specify multiple weights, e.g., ['400', '700']
-  subsets: ['latin'], // Specify subsets if needed
-});
+  weight: "400",
+  subsets: ["latin"],
+})
 
 export default function Home() {
-  // let showSongsList = false
   const [songs, setSongs] = useState([
     {
       id: 1,
@@ -97,7 +102,11 @@ export default function Home() {
       <div className="w-[320px] ">
         {/* left section */}
         <div>
-          <h1 className={`text-center text-3xl font-bold tracking-wide ${poppins.className}`}>Music Player</h1>
+          <h1
+            className={`text-center text-3xl font-bold tracking-wide ${poppins.className}`}
+          >
+            Music Player
+          </h1>
         </div>
 
         <div className="flex justify-between items-center mt-2">
@@ -121,12 +130,20 @@ export default function Home() {
 
         <div className="flex justify-between mt-3 ">
           <div>
-            <h3 style={{
-              textShadow: "1px 1px 2px black"
-            }} className={`font-extrabold text-xl text-white ${poppins.className}`}>Abyss</h3>
+            <h3
+              style={{
+                textShadow: "1px 1px 2px black",
+              }}
+              className={`font-extrabold text-xl text-white ${poppins.className}`}
+            >
+              Abyss
+            </h3>
             <p className="text-slate-900 font-medium">Youngblud</p>
           </div>
-          <div className="cursor-pointer text-xl transition-all duration-500 active:scale-150"  onClick={handleFavClick}>
+          <div
+            className="cursor-pointer text-xl transition-all duration-500 active:scale-150"
+            onClick={handleFavClick}
+          >
             {favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like" />}
           </div>
         </div>
@@ -141,15 +158,24 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between text-3xl mt-3 ">
-          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handleShuffleBtnClick}>
+          <div
+            className="cursor-pointer transition-all duration-500 active:scale-150"
+            onClick={handleShuffleBtnClick}
+          >
             {shuffleBtn ? (
               <PiShuffleSimpleBold title="Shuffle off" />
             ) : (
               <PiShuffleSimpleLight title="Shuffle" />
             )}
           </div>
-          <TbPlayerSkipBackFilled title="Previous Track" className="transition-all duration-500 active:scale-150 cursor-pointer" />
-          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handlePlayBtnClick}>
+          <TbPlayerSkipBackFilled
+            title="Previous Track"
+            className="transition-all duration-500 active:scale-150 cursor-pointer"
+          />
+          <div
+            className="cursor-pointer transition-all duration-500 active:scale-150"
+            onClick={handlePlayBtnClick}
+          >
             {playBtn ? (
               <TbPlayerPause onClick={pauseSong} title="Pause" />
             ) : (
@@ -157,8 +183,14 @@ export default function Home() {
             )}
           </div>
 
-          <TbPlayerSkipForwardFilled title="Next Track" className="transition-all duration-500 active:scale-150 cursor-pointer"/>
-          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handleRepeatBtnClick}>
+          <TbPlayerSkipForwardFilled
+            title="Next Track"
+            className="transition-all duration-500 active:scale-150 cursor-pointer"
+          />
+          <div
+            className="cursor-pointer transition-all duration-500 active:scale-150"
+            onClick={handleRepeatBtnClick}
+          >
             {reapeatBtn ? (
               <RiRepeatOneFill title="Repeat off" />
             ) : (
