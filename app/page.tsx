@@ -94,7 +94,7 @@ export default function Home() {
             }} className="font-extrabold text-xl text-white">Abyss</h3>
             <p className="text-slate-900 font-medium">Youngblud</p>
           </div>
-          <div className="cursor-pointer text-xl "  onClick={handleFavClick}>{favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like"  />}</div>
+          <div className="cursor-pointer text-xl transition-all duration-500 active:scale-150"  onClick={handleFavClick}>{favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like"  />}</div>
         </div>
 
         <div className="flex justify-self-center flex-col mt-3 ">
@@ -108,12 +108,12 @@ export default function Home() {
         </div>
 
         <div className="flex justify-between text-3xl mt-3 ">
-          <div className="cursor-pointer" onClick={handleShuffleBtnClick}>{shuffleBtn ?<PiShuffleSimpleBold title="Shuffle off"/>: <PiShuffleSimpleLight title="Shuffle"/>}</div>
-          <TbPlayerSkipBackFilled title="Previous Track"/>
-          <div className="cursor-pointer" onClick={handlePlayBtnClick}>{playBtn ? <TbPlayerPause title="Pause" /> : <TbPlayerPlay title="Play" />}</div>
+          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handleShuffleBtnClick}>{shuffleBtn ?<PiShuffleSimpleBold title="Shuffle off"/>: <PiShuffleSimpleLight title="Shuffle"/>}</div>
+          <TbPlayerSkipBackFilled title="Previous Track" className="transition-all duration-500 active:scale-150 cursor-pointer"/>
+          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handlePlayBtnClick}>{playBtn ? <TbPlayerPause title="Pause" /> : <TbPlayerPlay title="Play" />}</div>
 
-          <TbPlayerSkipForwardFilled title="Next Track" />
-          <div className="cursor-pointer" onClick={handleRepeatBtnClick}>{reapeatBtn ?<RiRepeatOneFill title="Repeat off"/>: <RiRepeat2Fill title="Repeat One" />}</div>
+          <TbPlayerSkipForwardFilled title="Next Track" className="transition-all duration-500 active:scale-150 cursor-pointer"/>
+          <div className="cursor-pointer transition-all duration-500 active:scale-150" onClick={handleRepeatBtnClick}>{reapeatBtn ?<RiRepeatOneFill title="Repeat off"/>: <RiRepeat2Fill title="Repeat One" />}</div>
         </div>
       </div>
 
