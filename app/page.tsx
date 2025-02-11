@@ -78,7 +78,7 @@ export default function Home() {
         <div className="flex justify-between items-center mt-2" >
 
           <p className="font-semibold tracking-wide ">Playing now</p>
-          <div>
+          <div className="text-xl">
             <LuListMusic title="Play List" onClick={handleClick} className="cursor-pointer" />
           </div>
         </div>
@@ -92,7 +92,7 @@ export default function Home() {
             <h3 className="font-extrabold text-xl text-white">Abyss</h3>
             <p className="text-slate-900 font-medium">Youngblud</p>
           </div>
-          <div className="cursor-pointer" onClick={handleFavClick}>{favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like"  />}</div>
+          <div className="cursor-pointer text-xl "  onClick={handleFavClick}>{favBtn ? <FaHeart title="Disike" /> : <FaRegHeart title="Like"  />}</div>
         </div>
 
         <div className="flex justify-self-center flex-col mt-3 ">
