@@ -1,18 +1,18 @@
-"use client"
-import { IoChevronBackOutline } from "react-icons/io5"
-import { LuListMusic } from "react-icons/lu"
-import { FaRegHeart, FaHeart } from "react-icons/fa"
-import { PiShuffleSimpleLight, PiShuffleSimpleBold } from "react-icons/pi"
-import { RiRepeat2Fill, RiRepeatOneFill } from "react-icons/ri"
-import {
-  TbPlaylist,
-  TbTrashX,
-  TbPlayerSkipForwardFilled,
-  TbPlayerPause,
-  TbPlayerSkipBackFilled,
-  TbPlayerPlay,
-} from "react-icons/tb"
-import { useRef, useState } from "react"
+'use client'
+import { IoChevronBackOutline } from "react-icons/io5";
+import { LuListMusic } from "react-icons/lu";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { PiShuffleSimpleLight, PiShuffleSimpleBold } from "react-icons/pi";
+import { RiRepeat2Fill, RiRepeatOneFill } from "react-icons/ri";
+import { TbPlaylist, TbTrashX, TbPlayerSkipForwardFilled, TbPlayerPause, TbPlayerSkipBackFilled, TbPlayerPlay } from "react-icons/tb";
+import { useState, useRef } from "react";
+// pages/index.js or any component file
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+  weight: '400',      // You can specify multiple weights, e.g., ['400', '700']
+  subsets: ['latin'], // Specify subsets if needed
+});
 
 export default function Home() {
   // let showSongsList = false
@@ -97,7 +97,7 @@ export default function Home() {
       <div className="w-[320px] ">
         {/* left section */}
         <div>
-          <h1 className="text-center text-3xl font-bold ">Music Player</h1>
+          <h1 className={`text-center text-3xl font-bold tracking-wide ${poppins.className}`}>Music Player</h1>
         </div>
 
         <div className="flex justify-between items-center mt-2">
@@ -123,7 +123,7 @@ export default function Home() {
           <div>
             <h3 style={{
               textShadow: "1px 1px 2px black"
-            }} className="font-extrabold text-xl text-white">Abyss</h3>
+            }} className={`font-extrabold text-xl text-white ${poppins.className}`}>Abyss</h3>
             <p className="text-slate-900 font-medium">Youngblud</p>
           </div>
           <div className="cursor-pointer text-xl transition-all duration-500 active:scale-150"  onClick={handleFavClick}>
